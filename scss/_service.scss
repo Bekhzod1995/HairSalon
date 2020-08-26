@@ -1,0 +1,164 @@
+/* :: 16.0 Service CSS */
+
+.single-service-area {
+    position: relative;
+    z-index: 1;
+    padding: 40px 20px;
+    border: 1px solid $border;
+    text-align: center;
+    @include transition-duration(500ms);
+
+    @media #{$breakpoint-lg} {
+        padding: 30px 15px;
+    }
+
+    img {
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    h5 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        @include transition-duration(300ms);
+
+        @media #{$breakpoint-lg} {
+            font-size: 18px;
+        }
+    }
+
+    p {
+        margin-bottom: 0;
+
+        @media #{$breakpoint-lg} {
+            font-size: 14px;
+        }
+    }
+
+    &:hover,
+    &:focus {
+        border-color: transparent;
+        @include box-shadow($box-shadow);
+
+        h5 {
+            color: $hover;
+        }
+    }
+}
+
+.single--service--item {
+    position: relative;
+    z-index: 1;
+
+    .service-content {
+        @include flex(0 0 50%);
+        max-width: 50%;
+        width: 50%;
+
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 100%);
+            max-width: 100%;
+            width: 100%;
+        }
+
+        .service-text {
+            margin-left: auto;
+            width: 555px;
+            padding: 80px 0;
+
+            @media #{$breakpoint-lg} {
+                width: 455px;
+            }
+
+            @media #{$breakpoint-md} {
+                width: 345px;
+            }
+            
+            @media #{$breakpoint-xs} {
+                width: 100%;
+                padding: 80px 30px;
+            }
+
+            h2 {
+                font-size: 42px;
+                display: block;
+                margin-bottom: 40px;
+
+                @media #{$breakpoint-lg} {
+                    font-size: 36px;
+                }
+
+                @media #{$breakpoint-md} {
+                    font-size: 30px;
+                }
+                
+                @media #{$breakpoint-xs} {
+                    font-size: 24px;
+                }
+            }
+
+            p {
+                margin-bottom: 30px;
+                display: block;
+                max-width: 250px;
+                @include display-flex(flex);
+                @include justify-content-between;
+
+                span {
+                    &:last-child {
+                        font-weight: 600;
+                        color: $heading;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .service-thumbnail {
+        position: relative;
+        z-index: 1;
+        @include flex(0 0 50%);
+        max-width: 50%;
+        width: 50%;
+        height: 500px;
+
+        @media #{$breakpoint-xs} {
+            @include flex(0 0 100%);
+            max-width: 100%;
+            width: 100%;
+            height: 300px;
+        }
+    }
+
+    &.odd-item {
+        .service-content {
+            .service-text {
+                margin-left: 15%;
+                width: auto;
+                
+                @media #{$breakpoint-xs} {
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+}
+
+.akame-service-area {
+    position: relative;
+    z-index: 1;
+
+    .single--service--item {
+        &:first-child {
+            border-top: 1px solid $border;
+        }
+
+        &:last-child {
+            border-bottom: 1px solid $border;
+        }
+    }
+}

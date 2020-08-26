@@ -1,0 +1,49 @@
+/* :: 10.0 CTA CSS */
+
+.akame-cta-area {
+    position: relative;
+    z-index: 1;
+
+    .cta-content {
+        h2 {
+            font-size: 48px;
+            display: block;
+            margin-bottom: 30px;
+            
+            @media #{$breakpoint-lg} {
+                font-size: 36px;
+            }
+            
+            @media #{$breakpoint-md} {
+                font-size: 36px;
+            }
+            
+            @media #{$breakpoint-xs} {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .cta-thumbnail {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        z-index: -1;
+        top: 0;
+        right: 0;
+        
+        @media #{$breakpoint-lg} {
+            width: 65%;
+        }
+        
+        @media #{$breakpoint-md} {
+            width: 70%;
+            opacity: 0.5;
+        }
+        
+        @media #{$breakpoint-xs} {
+            width: 100%;
+            opacity: 0.2;
+        }
+    }
+}

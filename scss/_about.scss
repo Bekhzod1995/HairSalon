@@ -1,0 +1,394 @@
+/* :: 17.0 About CSS */
+
+.about-us-thumbnail {
+    position: relative;
+    z-index: 1;
+
+    img {
+        @include box-shadow($box-shadow);
+    }
+}
+
+.about-us-content {
+    position: relative;
+    z-index: 1;
+
+    h3 {
+        display: block;
+        margin-bottom: 15px;
+
+        @media #{$breakpoint-lg} {
+            font-size: 24px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 24px;
+        }
+    }
+}
+
+.about--us--content {
+    p {
+        font-size: 20px;
+        font-style: italic;
+        color: $heading;
+        margin-bottom: 25px;
+    }
+
+    img {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    h4 {
+        margin-bottom: 0;
+    }
+}
+
+.akame--video--area {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        position: absolute;
+        width: 100%;
+        height: 60%;
+        content: '';
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        background-color: $bg-gray;
+
+        @media #{$breakpoint-md} {
+            height: 70%;
+        }
+
+        @media #{$breakpoint-xs} {
+            height: 90%;
+        }
+    }
+
+    .video-content-area {
+        position: relative;
+        z-index: 1;
+        background-color: $white;
+        border: 20px solid $white;
+        box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+
+        .video-play-btn {
+            display: inline-block;
+            width: 90px;
+            height: 90px;
+            background-color: $primary;
+            color: $white;
+            font-size: 30px;
+            text-align: center;
+            line-height: 90px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -45px;
+            margin-left: -45px;
+            z-index: 100;
+
+            i {
+                padding-left: 5px;
+            }
+
+            @media #{$breakpoint-xs} {
+                width: 60px;
+                height: 60px;
+                font-size: 24px;
+                line-height: 60px;
+                margin-top: -30px;
+                margin-left: -30px;
+            }
+
+            &:hover,
+            &:focus {
+                background-color: $dark;
+            }
+        }
+    }
+}
+
+.single-cool-facts-area {
+    position: relative;
+    z-index: 1;
+
+    span {
+        position: absolute;
+        top: 50%;
+        font-size: 48px;
+        color: $hover;
+        font-family: $font-playfair-display;
+        text-transform: uppercase;
+        line-height: 1;
+        @include transform(translate(-50%, -50%));
+        z-index: -1;
+        opacity: 0.15;
+        left: 50%;
+        font-weight: 700;
+    }
+
+    h2 {
+        font-size: 60px;
+        display: block;
+        margin-bottom: 10px;
+
+        @media #{$breakpoint-xs} {
+            font-size: 36px;
+        }
+
+        @media #{$breakpoint-sm} {
+            font-size: 42px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-bottom: 0;
+        color: $text;
+    }
+}
+
+.testimonial-slides {
+    position: relative;
+    z-index: 1;
+
+    .owl-dots {
+        margin-top: 50px;
+        @include display-flex(flex);
+        @include align-items-center;
+        @include justify-content-center;
+
+        .owl-dot {
+            width: 12px;
+            height: 12px;
+            border: 1px solid $hover;
+            margin: 0 5px;
+            border-radius: 50%;
+
+            &.active {
+                background-color: $hover;
+            }
+        }
+    }
+}
+
+.single-testimonial-slide {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    img {
+        width: 35px !important;
+        margin: 0 auto 50px;
+    }
+
+    p {
+        color: $heading;
+        font-size: 24px;
+        margin-bottom: 30px;
+
+        @media #{$breakpoint-xs} {
+            font-size: 20px;
+        }
+    }
+
+    .ratings-name {
+        position: relative;
+        z-index: 1;
+
+        .ratings {
+            font-size: 16px;
+            color: #e0cd3f;
+        }
+
+        h5 {
+            font-size: 18px;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.booking-info {
+    position: relative;
+    z-index: 1;
+
+    h2 {
+        font-size: 42px;
+        margin-bottom: 20px;
+
+        @media #{$breakpoint-xs} {
+            font-size: 36px;
+        }
+    }
+
+    h4 {
+        color: $primary;
+        margin-bottom: 15px;
+    }
+
+    p:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.single-booking-table {
+    position: relative;
+    z-index: 1;
+    border-left: 1px solid $border;
+    margin: 0 70px;
+
+    @media #{$breakpoint-xs} {
+        margin: 0;
+    }
+
+    .single-date-hours {
+        position: relative;
+        z-index: 1;
+        @include flex(0 0 33.3333%);
+        max-width: 33.3333%;
+        width: 33.3333%;
+
+        .booking-day {
+            border: 1px solid $border;
+            text-align: center;
+            padding: 20px 15px;
+            width: 100%;
+            border-left: none;
+
+            h5 {
+                font-weight: 600;
+                font-family: $font-opensans;
+
+                @media #{$breakpoint-lg} {
+                    font-size: 16px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 14px;
+                }
+            }
+
+            h6 {
+                margin-bottom: 0;
+                font-family: $font-opensans;
+
+                @media #{$breakpoint-lg} {
+                    font-size: 12px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 12px;
+                }
+            }
+        }
+
+        .booking-hours {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+
+            span {
+                @include flex(0 0 50%);
+                max-width: 50%;
+                width: 50%;
+                border-right: 1px solid $border;
+                border-bottom: 1px solid $border;
+                padding: 20px 5px;
+                font-size: 24px;
+                color: $heading;
+
+                @media #{$breakpoint-lg} {
+                    font-size: 20px;
+                }
+
+                @media #{$breakpoint-xs} {
+                    font-size: 12px;
+                }
+
+                &.active {
+                    background-color: $bg-gray;
+                    color: $secondary;
+                }
+            }
+        }
+
+        &.active {
+            .booking-day {
+                background-color: $hover;
+
+                h5,
+                h6 {
+                    color: $white;
+                }
+            }
+        }
+    }
+}
+
+.booking-table-slider {
+    position: relative;
+    z-index: 1;
+
+    .owl-prev,
+    .owl-next {
+        width: 40px;
+        height: 40px;
+        position: absolute;
+        border: 1px solid $heading;
+        color: $heading;
+        text-align: center;
+        line-height: 40px;
+        font-size: 24px;
+        border-radius: 50%;
+        @include transition-duration(500ms);
+        top: 50%;
+        margin-top: -20px;
+        left: 20px;
+
+        @media #{$breakpoint-xs} {
+            display: none;
+        }
+
+        &:hover,
+        &:focus {
+            border-color: $hover;
+            background-color: $hover;
+            color: $white;
+        }
+    }
+
+    .owl-next {
+        left: auto;
+        right: 20px;
+    }
+
+    .owl-dots {
+        margin-top: 30px;
+        @include display-flex(flex);
+        @include align-items-center;
+        margin: 30px auto 0;
+        width: 200px;
+        border: 1px solid $border;
+        border-radius: 6px;
+        height: 10px;
+
+        .owl-dot {
+            flex-grow: 1;
+            height: 10px;
+            border-radius: 5px;
+            @include transition-duration(500ms);
+
+            &.active {
+                height: 10px;
+                background-color: $hover;
+            }
+        }
+    }
+}

@@ -1,0 +1,64 @@
+/* :: 4.0 Heading CSS */
+
+.section-heading {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+
+    h2 {
+        font-size: 42px;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+        display: block;
+        line-height: 1.2;
+        
+        @media #{$breakpoint-lg} {
+            font-size: 36px;
+        }
+
+        @media #{$breakpoint-md} {
+            font-size: 36px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 30px;
+        }
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        font-size: 100px;
+        color: $hover;
+        font-family: $font-playfair-display;
+        text-transform: uppercase;
+        line-height: 1;
+        @include transform(translateY(-50%));
+        z-index: -1;
+        opacity: 0.1;
+        left: 0;
+        font-weight: 700;
+        
+        @media #{$breakpoint-lg} {
+            font-size: 70px;
+        }
+        
+        @media #{$breakpoint-md} {
+            font-size: 70px;
+        }
+        
+        @media #{$breakpoint-xs} {
+            font-size: 50px;
+        }
+    }
+
+    &.text-right {
+        span {
+            right: 48px;
+        }
+    }
+}

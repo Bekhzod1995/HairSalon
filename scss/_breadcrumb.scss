@@ -1,0 +1,46 @@
+/* :: 11.0 Breadcrumb CSS */
+
+.breadcrumb-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+    h2 {
+        font-size: 60px;
+        margin-bottom: 15px;
+
+        @media #{$breakpoint-lg} {
+            font-size: 48px;
+        }
+
+        @media #{$breakpoint-md} {
+            font-size: 48px;
+        }
+
+        @media #{$breakpoint-xs} {
+            font-size: 36px;
+        }
+    }
+
+    .breadcrumb {
+        position: relative;
+        padding: 0;
+        background-color: transparent;
+        @include justify-content-center;
+
+        .breadcrumb-item {
+            a {
+
+                &:hover,
+                &:focus {
+                    color: $hover;
+                }
+            }
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: '\f101';
+            font-family: "FontAwesome";
+        }
+    }
+}

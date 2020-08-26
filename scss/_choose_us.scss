@@ -1,0 +1,50 @@
+/* :: 13.0 Choose Us CSS */
+
+.choose-us-content {
+    position: relative;
+    z-index: 1;
+
+    ul {
+        li {
+            font-size: 16px;
+            display: block;
+            margin-bottom: 15px;
+
+            i {
+                color: $hover;
+                padding-right: 5px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.choose-us-thumbnail {
+    position: relative;
+    z-index: 1;
+    background-color: #ebebeb;
+    border-radius: 4px;
+    height: 380px;
+
+    @media #{$breakpoint-xs} {
+        height: 220px;
+    }
+
+    .choose-us-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: -30px;
+        right: 30px;
+        z-index: 10;
+        border-radius: 4px;
+
+        @media #{$breakpoint-xs} {
+            top: -15px;
+            right: 15px;
+        }
+    }
+}
